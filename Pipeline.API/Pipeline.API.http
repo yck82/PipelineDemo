@@ -1,0 +1,17 @@
+@Pipeline.API_HostAddress = https://localhost:7117
+
+GET {{Pipeline.API_HostAddress}}/todoitems/
+Accept: application/json
+
+###
+Post {{Pipeline.API_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":true
+}
+
+GET {{Pipeline.API_HostAddress}}/todoitems/{id}
+Accept: application/json
+###

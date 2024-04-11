@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineDemo.Console", "PipelineDemo.Console\PipelineDemo.Console.csproj", "{AE428D9E-EEEC-4A79-8B68-C3053BF79DFB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cake", "Cake", "{4AF08EB9-58C7-445D-8085-24D2CB112E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineDemo.API", "PipelineDemo.API\PipelineDemo.API.csproj", "{197619F8-9D49-45A8-8334-FE8C24A95E2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipeline.API", "Pipeline.API\Pipeline.API.csproj", "{6D884E63-39F4-464D-9611-3A150097F42E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60918223-160F-47C4-8A82-E175E2B7FCD5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main_pipeline.yml = .github\workflows\main_pipeline.yml
+		Deployment\Scripts\Test.ps1 = Deployment\Scripts\Test.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineDemo.Tests", "PipelineDemo.Tests\PipelineDemo.Tests.csproj", "{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +21,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE428D9E-EEEC-4A79-8B68-C3053BF79DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE428D9E-EEEC-4A79-8B68-C3053BF79DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE428D9E-EEEC-4A79-8B68-C3053BF79DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE428D9E-EEEC-4A79-8B68-C3053BF79DFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{197619F8-9D49-45A8-8334-FE8C24A95E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{197619F8-9D49-45A8-8334-FE8C24A95E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{197619F8-9D49-45A8-8334-FE8C24A95E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{197619F8-9D49-45A8-8334-FE8C24A95E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D884E63-39F4-464D-9611-3A150097F42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D884E63-39F4-464D-9611-3A150097F42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D884E63-39F4-464D-9611-3A150097F42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D884E63-39F4-464D-9611-3A150097F42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

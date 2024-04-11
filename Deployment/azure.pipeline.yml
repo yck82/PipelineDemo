@@ -1,0 +1,15 @@
+name: CI/CD Demo Pipeline Azure DevOps Pipelines
+
+trigger:
+  branches:
+    include:
+    - main
+    - features/*
+  paths:
+    include:
+    - src/*
+    exclude:
+    - src/specific-file-to-exclude.ext
+  pr:
+    - main
+    - features/*

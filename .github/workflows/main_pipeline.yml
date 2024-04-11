@@ -1,0 +1,36 @@
+# 1 Geef pipeline een naam
+
+name: CI/CD Demo Pipeline Github Actions
+
+# 1 Declareer variabelen
+#   Environment Variabelen on global, jobs and step level
+# 2 Configureer de trigger
+
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore -c Release
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+
+
+  
+    
+
+
