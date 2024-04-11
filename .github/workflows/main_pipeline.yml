@@ -1,6 +1,7 @@
-# 1 Geef pipeline een naam
+﻿# 1 Geef pipeline een naam
 
 name: CI/CD Demo Pipeline Github Actions
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 # 1 Declareer variabelen
 #   Environment Variabelen on global, jobs and step level
