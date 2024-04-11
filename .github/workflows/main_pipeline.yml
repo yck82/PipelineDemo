@@ -8,6 +8,7 @@ name: CI/CD Demo Pipeline Github Actions
 
 
 on:
+  # workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
@@ -17,6 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.12.1
+      uses: actions/setup-python@v3
+      with:
+          python-version: 3.12.1
+
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
