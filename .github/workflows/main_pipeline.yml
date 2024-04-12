@@ -17,6 +17,9 @@ on:
 
 jobs:
   build:
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'Solution1/UnitTest.sln'
     runs-on: ubuntu-latest
     steps:
 
@@ -36,7 +39,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Test
-      run: dotnet test .PipelineDemo.Tests.csproj --no-restore --no-build --verbosity normal
+      run: dotnet test PipelineDemo.Tests.csproj --no-restore --no-build --verbosity normal
 
 
 
