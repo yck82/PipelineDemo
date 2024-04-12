@@ -19,7 +19,7 @@ jobs:
   build:
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION: 'PipelineDemo'
+      SOLUTION: 'PipelineDemo.sln'
     runs-on: ubuntu-latest
     steps:
 
