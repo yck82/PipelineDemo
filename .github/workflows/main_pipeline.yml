@@ -30,11 +30,12 @@ jobs:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
     # - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.12.1
-      uses: actions/setup-python@v3
-      with:
-          python-version: 3.12.1
+    
+    # - uses: actions/checkout@v3
+    # - name: Set up Python 3.12.1
+    #   uses: actions/setup-python@v3
+    #   with:
+    #       python-version: 3.12.1
 
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -53,7 +54,7 @@ jobs:
 
     # Test Reporter
     - uses: actions/checkout@v3         # checkout the repo
-    - run: npm ci                       # install packages
+    # - run: npm ci                       # install packages
     - run: npm test                     # run tests (configured to use jest-junit reporter)
     - uses: actions/upload-artifact@v3  # upload test results
       if: success() || failure()        # run this step even if previous step failed
