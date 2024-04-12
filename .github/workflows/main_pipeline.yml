@@ -39,7 +39,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Test
-      run: dotnet test PipelineDemo.Tests.csproj --no-restore --no-build --verbosity normal
+      run: dotnet test $SOLUTION --configuration $BUILD_CONFIG --no-restore --no-build --verbosity normal
 
 
 
