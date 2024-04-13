@@ -3,11 +3,6 @@
 name: CI/CD Demo Pipeline Github Actions
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
-# 1 Declareer variabelen
-#   Environment Variabelen on global, jobs and step level
-# 2 Configureer de trigger
-
-
 on:
   # workflow_dispatch:
   push:
@@ -15,10 +10,10 @@ on:
   pull_request:
     branches: [ master ]
 
-# permissions:
-#   contents: read
-#   actions: read
-#   checks: write
+permissions:
+  contents: read
+  actions: read
+  checks: write
 
 jobs:
   build:
