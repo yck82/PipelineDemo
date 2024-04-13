@@ -10,10 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60918223-160F-47C4-8A82-E175E2B7FCD5}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\main_pipeline.yml = .github\workflows\main_pipeline.yml
-		Deployment\Scripts\Test.ps1 = Deployment\Scripts\Test.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineDemo.Tests", "PipelineDemo.Tests\PipelineDemo.Tests.csproj", "{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineDemo.Tests", "PipelineDemo.Tests\PipelineDemo.Tests.csproj", "{5E35307D-AFF5-450F-8E8D-4C57BB1F5DCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
