@@ -10,9 +10,9 @@ on:
     branches:
       - master
       - features/**
-    paths:
-      - '**.cs'
-      - '**.csproj'
+    # paths:
+    #   - '**.cs'
+    #   - '**.csproj'
 
 jobs:
   build: 
