@@ -1,1 +1,4 @@
-﻿
+﻿name: CI/CD Demo Pipeline Github Actions
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: [push]	
