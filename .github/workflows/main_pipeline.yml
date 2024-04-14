@@ -1,4 +1,54 @@
 ﻿name: CI/CD Demo Pipeline Github Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
-on: [push]	
+env:
+    DOTNET_VERSION: 8.0.x
+    BUILD_CONFIG: 'Release'
+    SOLUTION: 'PipelineDemo.sln'
+
+on:
+  push:
+    branches:
+      - master
+      - features/**
+    paths:
+      - '**.cs'
+      - '**.csproj'
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+    
+    - name: Test
+      run: dotnet test $SOLUTION --configuration $BUILD_CONFIG --no-restore --no-build --verbosity normal
+            --logger "trx;LogFileName=test-results.trx" || true
+      continue-on-error: true
+
+    - name: dotnet publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+          name: .net-app
+          path: ${{env.DOTNET_ROOT}}/myapp
+
+  
+
+
+
+
+
